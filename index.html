@@ -127,13 +127,13 @@ em{font-style:italic;color:var(--goldf)}
 }
 
 
-.hero h1{margin-bottom:30px;animation:fadeUp .7s ease-out .1s both;max-width:760px}
+.hero h1{margin-bottom:30px;max-width:760px;animation:fadeIn .9s ease-out .05s both}
 .hero-lead{
   font-size:1.02rem;font-weight:300;line-height:1.76;
   color:rgba(200,193,184,.75);max-width:600px;
-  margin-bottom:52px;animation:fadeUp .7s ease-out .2s both;
+  margin-bottom:52px;animation:fadeIn .9s ease-out .18s both;
 }
-.hero-cta{animation:fadeUp .7s ease-out .3s both}
+.hero-cta{animation:fadeIn .9s ease-out .32s both}
 
 
 /* ══ CREDENCIAIS BAR ══ */
@@ -230,7 +230,7 @@ em{font-style:italic;color:var(--goldf)}
 .about-photo{
   width:100%;max-width:420px;
   aspect-ratio:4/5;
-  object-fit:cover;object-position:top center;
+  object-fit:cover;object-position:center 20%;
   display:block;
   filter:grayscale(10%) contrast(1.04);
 }
@@ -318,12 +318,14 @@ footer{background:#050505;border-top:1px solid var(--divider);padding:60px 0 30p
 
 /* ══ ANIMATIONS ══ */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .r{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .r.v{opacity:1;transform:translateY(0)}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:960px){
   section{padding:72px 0}
+  .hero-content{padding:120px 24px 80px}
   .prob-grid{grid-template-columns:repeat(3,1fr)}
   .prob-intro,.urg-grid,.diff-layout,.about-grid,.faq-layout{grid-template-columns:1fr;gap:44px}
   .about-grid{grid-template-columns:1fr}
@@ -333,7 +335,8 @@ footer{background:#050505;border-top:1px solid var(--divider);padding:60px 0 30p
   .cred-div{display:none}
 }
 @media(max-width:620px){
-  h1{font-size:2.4rem}
+  h1{font-size:2.2rem}
+  .hero-content{padding:100px 20px 60px}
   .prob-grid{grid-template-columns:repeat(2,1fr)}
   .att-grid,
   .ft-grid{grid-template-columns:1fr}
@@ -341,6 +344,7 @@ footer{background:#050505;border-top:1px solid var(--divider);padding:60px 0 30p
   .brand-text{display:none}
   .wa-float{bottom:16px;right:16px}
   .about-photo-border{display:none}
+  .about-accent{display:none}
   .about-photo-wrap{display:flex;flex-direction:column;align-items:center}
 }
 </style>
